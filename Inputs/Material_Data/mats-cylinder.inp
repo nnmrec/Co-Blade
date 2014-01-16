@@ -1,0 +1,4 @@
+Example of material data file for when OPTIMIZE = true.  There must be 8 materials in this file, listed in order of the matName column.  Material properties referenced from "SNL/MSU/DOE May 29 2012 Composite Material Database, Version 21.0" (materials: "NCT307-D1-E300 E-Glass", "NB307-D1-7781-497A E-Glass", and "NCT307-D1-34-600 Carbon") and Gurit.com (material: "Corecell M-Foam M200")
+matID   E11     E22     G12    nu12   density  s11_fT  s11_fC  s22_yT  s22_yC   s12_y  matName
+(-)    (Pa)    (Pa)    (Pa)     (-)  (kg/m^3)    (Pa)    (Pa)    (Pa)    (Pa)    (Pa)  (-)
+1     200e9    10e9     5e9     0.3      1000     Inf    -Inf     Inf    -Inf     Inf  (blade-shell)

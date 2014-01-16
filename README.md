@@ -11,4 +11,3 @@ Co-Blade v2.0.0 (coming soon)
 
 This project is undergoing migration from the original Google Code repo.  
 Thanks for your patience as we organize this transition.
-The first release of Co-Blade on GitHub is expected in December 2013.  ;-)

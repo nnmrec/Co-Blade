@@ -1,0 +1,171 @@
+Co-Blade Change Log
+=============================================================================
+
+==== v1.00.00 Feb-27-2012  D.C. Sale ========================================
+This is the first release of Co-Blade.  
+
+
+==== v1.00.10 Jun-11-2012  D.C. Sale ========================================
+[Update] 
+Changed variable names for data structures holding coordinate system 
+transformation data.
+
+
+==== v1.10.00 Aug-13-2012  D.C. Sale ========================================
+[Update] 
+Added ability to perform gradient based optimization with fmincon() 
+
+[Update] 
+Improved the initial guess for structural design variables
+
+[Update] 
+Added function defineWebNode to replace code in structAnalysis.m
+
+[Update] 
+Added 3D image of blade that represents the current best design of the
+optimization algorithm.  Improved visual format of plot that shows
+progress of optimization algorithm.
+
+[Bug Fix] 
+On rare occasions, the structural analysis can crash (due to being supplied
+a bogus design from the optimization algorithm) that will cause the optimization
+to also crash.  Added a failsafe with some "catch-try" statements that allows
+the optimization to recover from this type of error.
+
+[Bug Fix] 
+Added error check to see if BModes.exe exists, if not gives instructions
+on how to download/install BModes.
+
+[Bug Fix] 
+Added error checking on BModes input so that BModes will not crash (hopefully)
+The BModes analysis is skipped if errors are detected.
+
+[Bug Fix] 
+Fixed a bug where the new main input file was not created correctly after optimization run.
+
+[Bug Fix] 
+Added more rigorous error checking to see if webs extend beyond the leading & trailing edges.
+
+[Bug Fix] 
+Fixed a bug in plotLoadsDisp.m that would crash when INTERP_AF = none.
+
+
+==== v1.20.00 Sept-12-2012  D.C. Sale =======================================
+[Update] 
+Major re-write of the majority of all Co-Blade source code.  The major change was
+to group common variables together into structures, and previous function calls which
+had lengthy lists of variables in the input/output arguments were replaced with a much
+shorter list of the structures containing the common variables.  This required many other
+changes to most source files besides just changing the input/output arguments.  This re-write
+reduced the total lines of code, and hopefully also made it easier to understand.
+
+[Update] 
+Added a graphical user interface (GUI) that allows for better visualization
+of various output parameters in the blade panels and laminas.  This GUI plots
+a 3D representation of the turbine blade, and the user can select via a spreadsheet
+which panels and/or laminas are shown in the plot.  Also, can select which output
+parameter (i.e. Effective modulus, strain, stress, etc.) is visualized in the 
+selected panels and/or laminas.
+
+[Update] 
+Added a Particle Swarm Optimization algorithm.
+
+[Update] 
+Modified the format of the input file which allows users to specify the 
+initial guess for the strucutural optimization algorithm.  The new format
+is much easier to modify, and the format is now identical regardless of the 
+number of control points (NUM_CP) that are used in the optimization.
+
+[Update] 
+Improved the initial guess for structural design variables, and made
+some changes to the hard-coded upper & lower bounds for design variables.
+
+[Update] 
+Changed the file extension of the BModes input files to .bmi to differentiate
+them from the Co-Blade input files (which have .inp extension).  Also, changed
+the file extension of the main input file created after completion of the 
+structural optimization algorithm from .inp_oup to .inp and appended _OPT
+to the filename to easier differentiate this file.
+
+[Update] 
+Created new folder "Optimization_Data" which contains the input files for
+optimization algorithm settings and input files for the initial guess of the
+design variables.
+
+[Update] 
+Updated the wind turbine and tidal turbine example files.
+
+[Update] 
+Added some additional documentation about derivation of the transverse shear flow
+and torsional shear flow equations (Maple worksheet files).
+
+[Update] 
+Added some instructions for installation of Co-Blade in file installation_instructions.txt
+
+
+==== v1.21.00 Sept-26-2012  D.C. Sale =======================================
+[Bug Fix]
+Modified some equations for calculating Young's modulus weighted 2nd area moments of inertia.
+Hayat Khazar pointed out a possible mistake in the code, so I modified the equations for variables:
+(Ix_e_mc, Iy_e_mc, Ixy_e_mc), (Ix_e_tc, Iy_e_tc, Ixy_e_tc), and (Ix_e_sc, Iy_e_sc, Ixy_e_sc) in 
+the file structAnalysis.m
+
+[Bug Fix]
+Modified the equations for calculating the principal flapwise angle in file principalValues.m.
+
+
+==== v1.23.00 Dec-29-2012  D.C. Sale =======================================
+[Bug Fix]
+A bug in the error checking routines prevented users from creating beams with zero shear webs, 
+this is fixed now.
+
+[Bug Fix]
+The PSO toolbox was giving an error when compiled, made some changes to psocheckinitialpopulation
+and it compiles okay now.
+
+[Update]
+Compiling with Matlab R2012a and R2012b caused errors when GUI elements in the optimization
+tooboxes were called. So I now compiled with Matlab R2011b (v7.13) and Compiler v4.16 with MCR v7.16
+and I think everything works now & it is much faster now too.
+
+==== v1.24.00 Jan-21-2013  D.C. Sale =======================================
+-added additional error checking for initial conditions of optimization algorithm
+-changed default colormaps for all plotting functions (uses Sandia diverging colormap algorithms), and removed transparent figures
+-fixed bug with data GUI LE/TE outlines and cross sections being shown for all sections
+
+==== v1.30.00 June-14-2013  D.C. Sale =======================================
+-fixed bugs in Particle Swarm algorithm.  Updated to newest 2013 version, and then I added: 
+console output for actual function evaluations
+new stopping criteria: max function evaluations
+-all the new Monte Carlo anlysis from GMREC paper
+and 
+
+==== v2.00.00 Dec 2013  D.C. Sale =======================================
+[BUGFIX] 
+The diverging colormap does not always map the 0 value to the white color.  In other words, sometimes the 0 value appears 
+as blue or red.
+
+[refactor] 
+all the new Monte Carlo analysis from GMREC paper, clean-up the code!
+
+[feature]  
+add capabilities to visualize in VisIt and Paraview
+
+[feature]  
+add a basic mesh generator for Material Point Method (MPM), this feature
+creates particles in place of the laminas, where the lamina thickness is 
+equal to the particle diameter, and particles are centered along the
+s-coordinate of each individual lamina.  Well.......................
+....maybe this is too much detail...the particle diameter could also 
+be equal to the panel thickness with particles centered along the 
+s-coordinate of each individual panel...I think this is easier for now.
+For the MPM method, I think we need to output the stiffness matrix, mass, stress/strain of each particle
+for visualization with VTK.
+
+[feature]  
+add 3D printing capabilities to Co-Blade via Matlab FEX implementations,
+and print a new rotor via Storti's lab as an example...if possible......
+.......can we print aeroelastically scaled rotors (i.e. variable stiffness)?
+
+[fix]
+reverted to the v1.30- fitness function, this actually worked better than the GMREC publication...oops

@@ -1,0 +1,25 @@
+This line is for user comments.  
+See (http://www.mathworks.com/help/toolbox/gads/bq54rjg.html) for further documentation on Pattern Search optimization parameters.
+-----  Pattern Search Options  -------------------------------------------------
+1e-6                  TolMesh:          Tolerance on mesh size. The GPS and GSS algorithms stop if the mesh size becomes smaller than Mesh tolerance. MADS 2N stops when the mesh size becomes smaller than TolMesh^2. MADS Np1 stops when the mesh size becomes smaller than (TolMesh/nVar)^2, where nVar is the number of design variables.
+1e-6                  TolX:             Tolerance on design variable. The algorithm stops if the distance between two consecutive points is less than TolX.
+1e-6                  TolFun:           Tolerance on function value. After a successful poll, if the difference between the function value at the previous best point and function value at the current best point is less than TolFun, the algorithm stops.
+1e-6                  TolBind:          Binding tolerance used to determine if linear constraint is active.
+Inf                   MaxIter:          Maximum number of iterations.
+3600                  MaxFunEvals:      Maximum number of objective function evaluations.
+Inf                   TimeLimit:        Total time (in seconds) allowed for optimization.
+0.5                   MeshContraction:  Mesh contraction factor, used when iteration is unsuccessful. 
+2                     MeshExpansion:    Mesh expansion factor, expands mesh when iteration is successful.
+on                    MeshAccelerator:  Accelerate mesh size contraction. (choose 'on' or 'off')
+on                    MeshRotate:       Rotate the pattern before declaring a point to be optimum. (choose 'on' or 'off')
+1                     InitialMeshSize:  Initial mesh size used in pattern search algorithms.
+on                    ScaleMesh:        Automatic scaling of variables (variables are normalized by the initial point).
+Inf                   MaxMeshSize:      Maximum mesh size used in a poll/search step.
+GSSPositiveBasis2N    PollMethod:       Polling strategy used in pattern search. Choose 'GSSPositiveBasis2N',  'GPSPositiveBasis2N', 'MADSPositiveBasis2N', 'GSSPositiveBasisNp1', 'GPSPositiveBasisNp1', or 'MADSPositiveBasisNp1'.
+on                    CompletePoll:     Complete poll around current iterate. Evaluate all the points in a poll step. (choose 'on' or 'off')
+success               PollingOrder:     Order in which search directions are polled. Choose 'random', 'success', or 'consecutive'.
+diagnose              Display:          Level of display to Command Window. Choose 'off' (no output is displayed), 'iter' (info is displayed for each iteration), 'diagnose' (it addition to 'iter', lists additional problem info and option settings), or 'final' (only the reason for stopping is displayed)
+on                    Cache:            With Cache set to 'on', patternsearch keeps a history of the mesh points it polls and does not poll points close to them again at subsequent iterations. (choose 'on' or 'off')
+10000                 CacheSize:        Size of the cache, in number of points.
+1e-6                  CacheTol:         Positive scalar specifying how close the current mesh point must be to a point in the cache in order for patternsearch to avoid polling it. Available if 'Cache' option is set to 'on'.
+

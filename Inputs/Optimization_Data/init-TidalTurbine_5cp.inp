@@ -1,0 +1,10 @@
+0.40            w_cap_inb:      Width of the spar cap normalized by the chord length (x/c) at the INB_STN blade stations.
+0.20            w_cap_oub:      Width of the spar cap normalized by the chord length (x/c) at the OUB_STN blade stations.
+0.030           t_blade_root:   Thickness of the �blade-root�  material (m) at the INB_STN blade station.
+0.0060    0.0050    0.0040    0.0030    0.0020     t_blade_skin:   Thickness of the �blade-shell� material (m) at control points 1 through NUM_CP (space delimited values).  The control points are equally spaced along the blade between the TRAN_STN and OUB_STN blade stations.
+0.0200    0.0150    0.0095    0.0050    0.0020     t_cap_uni:      Thickness of the �spar-uni�    material (m) at control points 1 through NUM_CP (space delimited values).  The control points are equally spaced along the blade between the TRAN_STN and OUB_STN blade stations.
+0.0001    0.0001    0.0001    0.0001    0.0001     t_cap_core:     Thickness of the �spar-core�   material (m) at control points 1 through NUM_CP (space delimited values).  The control points are equally spaced along the blade between the TRAN_STN and OUB_STN blade stations.
+0.0060    0.0040    0.0020    0.0010    0.0005     t_lep_core:     Thickness of the �LEP-core�    material (m) at control points 1 through NUM_CP (space delimited values).  The control points are equally spaced along the blade between the TRAN_STN and OUB_STN blade stations.
+0.0060    0.0040    0.0020    0.0010    0.0005     t_tep_core:     Thickness of the �TEP-core�    material (m) at control points 1 through NUM_CP (space delimited values).  The control points are equally spaced along the blade between the TRAN_STN and OUB_STN blade stations.
+0.0040    0.0040     t_web_skin:     Thickness of the �web-shell�   material (m) at the two control points located at INB_STN and OUB_STN (space delimited values).
+0.0020    0.0020     t_web_core:     Thickness of the �web-core�    material (m) at the two control points located at INB_STN and OUB_STN (space delimited values).

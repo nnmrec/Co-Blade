@@ -1,0 +1,120 @@
+-----  Input File  -------------------------------------------------------------
+Cylinder test.
+This line is for user comments.  
+----   Development Settings  --------------------------------------------------- 
+0               DEBUG_LVL       Controls the level of output from Co-Blade (0 for no debug messages, 1 and greater for more debugging messages and figures)
+42              RAND_SEED       A positive integer that seeds all random number generators.
+-----  Analysis Options  -------------------------------------------------------
+false           SELF_WEIGHT:    Include self-weight as a body force? (choose true or false)
+false           BUOYANCY:       Include buoyancy as a body force? (choose true or false)
+false           CENTRIF:        Include centrifugal force as a body force? (choose true or false)
+false           DISP_CF:        Apply correction factors to the beam displacements? (choose true or false)
+0               N_MODES:        Number of modes to be computed 
+30              N_ELEMS:        Number of blade finite elements to be used in the modal analysis
+false           VARY_MAT_PROPS: Perform Monte Carlo analysis with uncertain material properties?
+100             SAMPLE_SIZE:    Sample size for Monte Carlo analysis
+0.10            MAT_COV:        Coefficient of variation (cov = std/mean) for uncertain material properties
+-----  Optimization  -----------------------------------------------------------
+false           OPTIMIZE:       Perform optimization of composite layup?
+PSO             OPT_METHOD:     Optimization algorithm for the optimization of composite layup (choose 'PS', 'GS', 'GA', or 'PSO')
+false           OPT_PITAXIS:    Optimize the pitch axis?
+0.50            PITAXIS_VAL:    Pitch axis value outboard of max chord (ignored if OPT_PITAXIS = false)
+2               INB_STN:        Inboard station where the leading and trailing edge panels, spar caps, and shear webs begin
+7               TRAN_STN:       Station where the root transition ends
+29              OUB_STN:        Outboard station where the leading and trailing edge panels, spar caps, and shear webs end
+2               NUM_CP:         Number of control points between INB_STN and OUB_STN
+true            READ_INITX:     Read the initial values for the design variables from INITX_FILE?
+Tidal_InitX.inp INITX_FILE:     Input file for the intitial values of the design variables.
+false           WRITE_STR:      Write structural input files at each function evaluation? (recommended to set = false, unless for debugging purposes)
+true            WRITE_F_ALL:    Write the fitness value and penalty factors at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_X_ALL:    Write the design variables at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_X_ITER:   Write the design variables at each iteration? (recommended to set = false, unless for debugging purposes)
+-----  Constraints  ------------------------------------------------------------
+0.5             MAX_TIP_D:      Maximum allowable tip deflection (m) (deflection in the x-direction of global coord. system)
+2.0             MIN_FREQ_SEP:   Minimum allowable difference between the blade rotation frequency and blade natural frequencies (Hz)
+-----  Environmental Data  -----------------------------------------------------
+1025.0          FLUID_DEN:      Fluid density (kg/m^3)
+9.81            GRAV:           Gravitational acceleration (m/s^2)
+-----  Blade Data  -------------------------------------------------------------
+25              NUM_SEC:        Number of blade cross sections
+20.0            BLD_LENGTH:     Blade length (m)
+0.0             HUB_RAD:        Hub radius (m)
+0.0             SHAFT_TILT:     Shaft tilt angle (deg)
+0.0             PRE_CONE:       Pre-cone angle (deg)
+90              AZIM:           Azimuth angle (deg)
+0.0             BLD_PITCH:      Blade pitch angle (deg)
+0               ROT_SPD:        Rotor rotational speed (rpm)
+none            INTERP_AF:      Interpolate airfoil coordinates? (choose "none", "cosine", or "equal" with no quotation marks)
+100             N_AF:           Number of points in interpolated airfoil coordinates (ignored if INTERP_AF = none)
+mats-cylinder.inp    MATS_FILE:      Input file for material properties
+0               FILLER_DENS:    (CURRENTLY IGNORED) Density of blade filler material (kg/m^3) (enter 0 if no filler material exists)
+zFrac     aeroTwst        chord      pitAxis         px_a         py_a         qz_a    af_shape_file    int_str_file
+  (-)        (deg)          (m)          (-)        (N/m)        (N/m)          (N)              (-)             (-)
+0.00		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.05		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.10		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.15		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.20		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.25		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.30		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.35		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.40		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.45		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.50		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.55		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.60		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.65		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.70		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.75		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.80		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.85		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.90		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.9995		0				1			0.5			0			0				0		Circle.prof		case2.lam
+0.9996		0				1			0.5			0			166666.66		0		Circle.prof		case2.lam
+0.9997		0				1			0.5			0			166666.66		0		Circle.prof		case2.lam
+0.9998		0				1			0.5			0			166666.66		0		Circle.prof		case2.lam
+0.9999		0				1			0.5			0			0				0		Circle.prof		case2.lam
+1.00		0				1			0.5			0			0				0		Circle.prof		case2.lam
+-----  Shear Web Data  ---------------------------------------------------------
+0               NUM_WEBS:       number of webs
+10              WEB_NODES:      number of nodes in each web (ignored if NUM_WEBS = 0)
+webNum    inbStn    oubStn     inbChLoc     oubChLoc (This table of values is ignored if OPTIMIZE = true)
+   (-)       (-)       (-)          (-)          (-)
+-----  Output Options  ---------------------------------------------------------
+true            TAB_DEL:        Tab delimited text output files?
+true            PROPS_FILE:     Write structural properties text output file? 
+true            LOAD_DSP_FILE:  Write loads and displacement text output file? 
+false           PANEL_FILE:     Write panel data text output file?
+false           LAMINA_FILE:    Write lamina data text output file?
+true            DATA_GUI:       Open graphical user interface (GUI) to visualize geometry, panel, and layer data?
+false           SAVE_PLOTS:     Save plots to a file? (only saves plots which are actually created)
+-png,-r300,-a1  SAVE_FIG_FMT:   Image file format. Enter -fig to save as MATLAB .fig, otherwise enter a comma delimited (no spaces) list of format options (ex: -png,-r300,-a2)
+true            PLOT_OPT_ITER:  Plot information on design variables and convergence criteria during optimization iterations? (ignored if OPTIMIZE = false)
+false           PLOT_F_BLD:     Plot applied forces on the blade geometry?
+false           PLOT_DISP_BLD:  Plot displaced blade geometry?
+false           PLOT_GBL_SYS:   Plot the applied forces & displaced blade geometry in the global coordinate system? (ignored if PLOT_F_BLD and PLOT_DISP_BLD are false)
+false           PLOT_YMOD:      Plot panel effective Young's modulus? 
+false           PLOT_GMOD:      Plot panel effective shear modulus? 
+false           PLOT_MASS_DEN:  Plot mass distribution?
+false           PLOT_PRIN_ANG:  Plot angle of principal axes?
+false           PLOT_AT_STFF:   Plot axial and torsional stiffness?
+false           PLOT_BSTFF:     Plot bending stiffness?
+false           PLOT_INER:      Plot mass moments of inertia?
+false           PLOT_CENTERS:   Plot locations of mass center, tension center, and shear center?
+false           PLOT_NORMS:     Plot panel normal stress? 
+false           PLOT_SHEARS:    Plot panel shear stress?
+false           PLOT_BCRIT:     Plot panel buckling criteria? 
+false           PLOT_E11:       Plot lamina 1st principal strain? 
+false           PLOT_E22:       Plot lamina 2nd principal strain? 
+false           PLOT_E12:       Plot lamina principal shear strain? 
+false           PLOT_S11:       Plot lamina 1st principal stress? 
+false           PLOT_S22:       Plot lamina 2nd principal stress? 
+false           PLOT_S12:       Plot lamina principal shear stress? 
+false           PLOT_S11_FC:    Plot lamina 1st principal stress failure criteria? 
+false           PLOT_S22_FC:    Plot lamina 2nd principal stress failure criteria? 
+false           PLOT_S12_FC:    Plot lamina principal shear stress failure criteria?
+false           PLOT_MODE_D:    Plot modal displacements?
+false           PLOT_MODE_S:    Plot modal slopes?
+false           PLOT_APPLOADS:  Plot applied loads?
+true            PLOT_RESLOADS:  Plot resultant loads?
+true            PLOT_DEFLECT:   Plot blade centroidal deflections?

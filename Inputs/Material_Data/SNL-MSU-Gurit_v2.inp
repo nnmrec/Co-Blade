@@ -1,0 +1,11 @@
+Example of material data file for when OPTIMIZE = true.  There must be 8 materials in this file, listed in order of the matName column.  Material properties referenced from "SNL/MSU/DOE May 29 2012 Composite Material Database, Version 21.0" (materials: "NCT307-D1-E300 E-Glass", "NB307-D1-7781-497A E-Glass", and "NCT307-D1-34-600 Carbon") and Gurit.com (material: "Corecell M-Foam M200")
+matID   E11     E22     G12    nu12   density  s11_fT  s11_fC  s22_yT  s22_yC   s12_y  matName
+(-)    (Pa)    (Pa)    (Pa)     (-)  (kg/m^3)    (Pa)    (Pa)    (Pa)    (Pa)    (Pa)  (-)
+1    35.5e9  8.33e9  4.12e9    0.33      1780  1005e6  -788e6  51.2e6 -51.2e6   112e6  (blade-root)
+2    19.2e9  19.2e9  3.95e9    0.13      1670   337e6  -497e6   337e6  -337e6   115e6  (blade-shell)
+3    35.5e9  8.33e9  4.12e9    0.33      1780  1005e6  -788e6  51.2e6 -51.2e6   112e6  (spar-uni)
+4     210e6   210e6    98e6    0.33       200  4.29e6 -4.29e6  4.29e6 -4.29e6  2.95e6  (spar-core)
+5     210e6   210e6    98e6    0.33       200  4.29e6 -4.29e6  4.29e6 -4.29e6  2.95e6  (LEP-core)
+6     210e6   210e6    98e6    0.33       200  4.29e6 -4.29e6  4.29e6 -4.29e6  2.95e6  (TEP-core)
+7    19.2e9  19.2e9  3.95e9    0.13      1670   337e6  -497e6   337e6  -337e6   115e6  (web-shell)
+8     210e6   210e6    98e6    0.33       200  4.29e6 -4.29e6  4.29e6 -4.29e6  2.95e6  (web-core)

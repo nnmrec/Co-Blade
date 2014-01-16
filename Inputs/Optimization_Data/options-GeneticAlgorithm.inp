@@ -1,0 +1,18 @@
+% This line is for user comments.  NOTE: this file must match Matlab syntax EXACTLY! 
+% See (http://www.mathworks.com/help/gads/genetic-algorithm.html) for further documentation on Genetic Algorithm optimization parameters.
+% -----  Genetic Algorithm Options  -------------------------------------------------
+OptionsGA = gaoptimset('Generations',           30, 
+					   'PopulationSize',		120, 
+					   'CreationFcn', 			@gacreationlinearfeasible,   
+					   'InitialScores',			[], 
+					   'EliteCount',			1, 
+					   'CrossoverFraction',		0.8, 
+					   'StallGenLimit',			100, 
+					   'TolFun',				0.001, 
+					   'OutputFcns',			gaCustomOutput, 
+					   'PlotFcns',				plotFcns, 
+					   'CrossoverFcn',			@crossoverheuristic, 
+					   'SelectionFcn',			@selectionstochunif, 
+					   'FitnessScalingFcn',		@fitscalingrank, 
+					   'MutationFcn',			@mutationadaptfeasible, 
+					   'Display',				'diagnose');

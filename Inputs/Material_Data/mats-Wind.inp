@@ -1,0 +1,11 @@
+Material properties based approximately from D. Griffith and T. Ashwill (2011) "The Sandia 100-m All-Glass Baseline Wind Turbine Blade: SNL100-00"
+matID   E11     E22     G12    nu12   density  s11_fT  s11_fC  s22_yT  s22_yC   s12_y  matName
+(-)    (Pa)    (Pa)    (Pa)     (-)  (kg/m^3)    (Pa)    (Pa)    (Pa)    (Pa)    (Pa)  (-)
+1      28e9    14e9     7e9    0.40      1850   144e6  -213e6     Inf    -Inf    60e6  (blade-root)
+2      28e9    14e9     7e9    0.40      1850   144e6  -213e6     Inf    -Inf    60e6  (blade-shell)
+3      42e9    14e9     3e9    0.28      1920   972e6  -702e6     Inf    -Inf    30e6  (spar-uni)
+4     260e6   260e6    20e6    0.30       200     Inf    -Inf     Inf    -Inf     Inf  (spar-core)
+5     260e6   260e6    20e6    0.30       200     Inf    -Inf     Inf    -Inf     Inf  (LEP-core)
+6     260e6   260e6    20e6    0.30       200     Inf    -Inf     Inf    -Inf     Inf  (TEP-core)
+7      14e9    14e9    12e9    0.50      1780   144e6  -213e6     Inf    -Inf    90e6  (web-shell)
+8     260e6   260e6    20e6    0.30       200     Inf    -Inf     Inf    -Inf     Inf  (web-core)
