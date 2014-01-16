@@ -1,4 +1,4 @@
-Co-Blade v2.0.0 (coming soon)
+Co-Blade v2.0.0_rc1 (Release Candidate 1)
 ========
        _____                 ______ _           _      
       /  __ \                | ___ \ |         | |     
