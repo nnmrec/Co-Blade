@@ -1,0 +1,128 @@
+-----  Input File  -------------------------------------------------------------
+Blade from "Pareto solution 15" in the OCEANS 2012 paper.  See the Excel file for more data.  
+Load case corresponds to free stream current of 3 m/s.
+----   Development Settings  --------------------------------------------------- 
+0               DEBUG_LVL       Controls the level of output from Co-Blade (0 for no debug messages, 1 and greater for more debugging messages and figures)
+42              RAND_SEED       A positive integer that seeds all random number generators.
+-----  Analysis Options  -------------------------------------------------------
+true            SELF_WEIGHT:    Include self-weight as a body force? (choose true or false)
+true            BUOYANCY:       Include buoyancy as a body force? (choose true or false)
+true            CENTRIF:        Include centrifugal force as a body force? (choose true or false)
+true            DISP_CF:        Apply correction factors to the beam displacements? (choose true or false)
+0               N_MODES:        Number of modes to be computed 
+30              N_ELEMS:        Number of blade finite elements to be used in the modal analysis
+false           VARY_MAT_PROPS: Perform Monte Carlo analysis with uncertain material properties?
+100             SAMPLE_SIZE:    Sample size for Monte Carlo analysis
+0.10            MAT_COV:        Coefficient of variation (cov = std/mean) for uncertain material properties
+-----  Optimization  -----------------------------------------------------------
+true            OPTIMIZE:       Perform optimization of composite layup?
+GS              OPT_METHOD:     Optimization algorithm for the optimization of composite layup (choose 'PS', 'GS', 'GA', or 'PSO')
+false           OPT_PITAXIS:    Optimize the pitch axis?
+0.35            PITAXIS_VAL:    Pitch axis value outboard of max chord (ignored if OPT_PITAXIS = false)
+2               INB_STN:        Inboard station where the leading and trailing edge panels, spar caps, and shear webs begin
+12              TRAN_STN:       Station where the root transition ends
+29              OUB_STN:        Outboard station where the leading and trailing edge panels, spar caps, and shear webs end
+5               NUM_CP:         Number of control points between INB_STN and OUB_STN
+true            READ_INITX:     Read the initial values for the design variables from INITX_FILE?
+Tidal_InitX_5cp.inp INITX_FILE:     Input file for the initial values of the design variables.
+false           WRITE_STR:      Write structural input files at each function evaluation? (recommended to set = false, unless for debugging purposes)
+true           WRITE_F_ALL:    Write the fitness value and penalty factors at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_X_ALL:    Write the design variables at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_X_ITER:   Write the design variables at each iteration? (recommended to set = false, unless for debugging purposes)
+-----  Constraints  ------------------------------------------------------------
+0.45            MAX_TIP_D:      Maximum allowable tip deflection (m) (deflection in the x-direction of global coord. system)
+2.0             MIN_FREQ_SEP:   Minimum allowable difference between the blade rotation frequency and blade natural frequencies (Hz)
+-----  Environmental Data  -----------------------------------------------------
+1025.0          FLUID_DEN:      Fluid density (kg/m^3)
+9.81            GRAV:           Gravitational acceleration (m/s^2)
+-----  Blade Data  -------------------------------------------------------------
+31              NUM_SEC:        Number of blade cross sections
+9.0             BLD_LENGTH:     Blade length (m)
+1.00            HUB_RAD:        Hub radius (m)
+0.0             SHAFT_TILT:     Shaft tilt angle (deg)
+0.0             PRE_CONE:       Pre-cone angle (deg)
+90              AZIM:           Azimuth angle (deg)
+0.0             BLD_PITCH:      Blade pitch angle (deg)
+15              ROT_SPD:        Rotor rotational speed (rpm)
+cosine          INTERP_AF:      Interpolate airfoil coordinates? (choose "none", "cosine", or "equal" with no quotation marks)
+100             N_AF:           Number of points in interpolated airfoil coordinates (ignored if INTERP_AF = none)
+SNL-MSU-Gurit.inp    MATS_FILE:      Input file for material properties
+0               FILLER_DENS:    (CURRENTLY IGNORED) Density of blade filler material (kg/m^3) (enter 0 if no filler material exists)
+zFrac     aeroTwst        chord      pitAxis         px_a         py_a         qz_a    af_shape_file    int_str_file
+  (-)        (deg)          (m)          (-)        (N/m)        (N/m)          (N)              (-)             (-)
+0.000       12.400        0.700        0.500      596.300     1125.000        0.000    FFA_1000.prof    
+0.004       12.400        0.700        0.500      844.100     1518.800        0.000    FFA_1000.prof    
+0.012       12.400        0.704        0.503     1006.900     1777.900        0.000    FFA_0994.prof    
+0.026       12.400        0.727        0.502     1049.000     2207.600        0.000    FFA_0955.prof    
+0.045       12.400        0.794        0.477      769.700     3126.600        0.000    FFA_0850.prof    
+0.068       12.400        0.918        0.430     -144.800     4906.600        0.000    FFA_0690.prof    
+0.097       12.400        1.079        0.385    -1915.700     8031.200        0.000    FFA_0528.prof    
+0.129       12.400        1.239        0.353    -3911.400    11834.200        0.000    FFA_0398.prof    
+0.166       12.400        1.349        0.342    -5387.000    15640.500        0.000    FFA_0319.prof    
+0.207       11.484        1.365        0.350    -6047.500    19787.600        0.000    FFA_0295.prof    
+0.251        9.003        1.311        0.350    -6805.400    24327.300        0.000    FFA_0286.prof    
+0.297        7.188        1.191        0.350    -7384.800    28248.700        0.000    FFA_0274.prof    
+0.346        5.631        1.050        0.350   -10479.400    36341.400        0.000    FFA_0262.prof    
+0.396        4.293        0.913        0.350   -11646.800    41161.600        0.000    FFA_0248.prof    
+0.448        3.144        0.790        0.350   -11209.400    42689.200        0.000    FFA_0238.prof    
+0.500        2.152        0.682        0.350   -10055.100    42314.200        0.000    FFA_0231.prof    
+0.552        1.306        0.592        0.350    -7776.800    39763.400        0.000    FFA_0223.prof    
+0.604        0.582        0.516        0.350    -7154.100    40156.600        0.000    FFA_0215.prof    
+0.654       -0.026        0.452        0.350    -6654.000    39988.600        0.000    FFA_0211.prof    
+0.703       -0.529        0.396        0.350    -6229.700    39415.900        0.000    FFA_0210.prof    
+0.749       -0.943        0.348        0.350    -5803.300    38340.800        0.000    FFA_0210.prof    
+0.793       -1.272        0.304        0.350    -5341.700    36655.100        0.000    FFA_0210.prof    
+0.834       -1.525        0.266        0.350    -4876.100    34526.400        0.000    FFA_0210.prof    
+0.871       -1.719        0.230        0.350    -4411.400    32024.100        0.000    FFA_0210.prof    
+0.903       -1.865        0.199        0.350    -3961.600    29330.000        0.000    FFA_0210.prof    
+0.932       -1.956        0.171        0.350    -3563.200    26628.000        0.000    FFA_0210.prof    
+0.956       -2.021        0.148        0.350    -3294.000    24339.100        0.000    FFA_0210.prof    
+0.974       -2.066        0.130        0.350    -3253.600    22823.400        0.000    FFA_0210.prof    
+0.988       -2.090        0.116        0.350    -2778.000    21105.600        0.000    FFA_0210.prof    
+0.996       -2.105        0.109        0.350    -1691.400    17719.700        0.000    FFA_0210.prof    
+1.000       -2.112        0.105        0.350        0.000        0.000        0.000    FFA_0210.prof    
+-----  Shear Web Data  ---------------------------------------------------------
+2               NUM_WEBS:       number of webs
+10              WEB_NODES:      number of nodes in each web (ignored if NUM_WEBS = 0)
+webNum    inbStn    oubStn     inbChLoc     oubChLoc (This table of values is ignored if OPTIMIZE = true)
+   (-)       (-)       (-)          (-)          (-)
+     1         2        29   0.24860949   0.22519934
+     2         2        29   0.75139051   0.47480066
+-----  Output Options  ---------------------------------------------------------
+false           TAB_DEL:        Tab delimited text output files?
+true           PROPS_FILE:     Write structural properties text output file? 
+false           LOAD_DSP_FILE:  Write loads and displacement text output file? 
+false           PANEL_FILE:     Write panel data text output file?
+false           LAMINA_FILE:    Write lamina data text output file?
+false           DATA_GUI:       Open graphical user interface (GUI) to visualize geometry, panel, and layer data?
+false           SAVE_PLOTS:     Save plots to a file? (only saves plots which are actually created)
+-png,-r300,-a1  SAVE_FIG_FMT:   Image file format. Enter -fig to save as MATLAB .fig, otherwise enter a comma delimited (no spaces) list of format options (ex: -png,-r300,-a2)
+true            PLOT_OPT_ITER:  Plot information on design variables and convergence criteria during optimization iterations? (ignored if OPTIMIZE = false)
+false           PLOT_F_BLD:     Plot applied forces on the blade geometry?
+false           PLOT_DISP_BLD:  Plot displaced blade geometry?
+false           PLOT_GBL_SYS:   Plot the applied forces & displaced blade geometry in the global coordinate system? (ignored if PLOT_F_BLD and PLOT_DISP_BLD are false)
+false           PLOT_YMOD:      Plot panel effective Young's modulus? 
+false           PLOT_GMOD:      Plot panel effective shear modulus? 
+false           PLOT_MASS_DEN:  Plot mass distribution?
+false           PLOT_PRIN_ANG:  Plot angle of principal axes?
+false           PLOT_AT_STFF:   Plot axial and torsional stiffness?
+false           PLOT_BSTFF:     Plot bending stiffness?
+false           PLOT_INER:      Plot mass moments of inertia?
+false           PLOT_CENTERS:   Plot locations of mass center, tension center, and shear center?
+false           PLOT_NORMS:     Plot panel normal stress? 
+false           PLOT_SHEARS:    Plot panel shear stress?
+false           PLOT_BCRIT:     Plot panel buckling criteria? 
+false           PLOT_E11:       Plot lamina 1st principal strain? 
+false           PLOT_E22:       Plot lamina 2nd principal strain? 
+false           PLOT_E12:       Plot lamina principal shear strain? 
+false           PLOT_S11:       Plot lamina 1st principal stress? 
+false           PLOT_S22:       Plot lamina 2nd principal stress? 
+false           PLOT_S12:       Plot lamina principal shear stress? 
+false           PLOT_S11_FC:    Plot lamina 1st principal stress failure criteria? 
+false           PLOT_S22_FC:    Plot lamina 2nd principal stress failure criteria? 
+false           PLOT_S12_FC:    Plot lamina principal shear stress failure criteria?
+false           PLOT_MODE_D:    Plot modal displacements?
+false           PLOT_MODE_S:    Plot modal slopes?
+false           PLOT_APPLOADS:  Plot applied loads?
+false           PLOT_RESLOADS:  Plot resultant loads?
+false           PLOT_DEFLECT:   Plot blade centroidal deflections?

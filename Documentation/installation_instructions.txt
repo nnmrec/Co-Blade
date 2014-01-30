@@ -1,0 +1,29 @@
+Installation for Co-Blade v1.23.00-dcs
+================================================================================
+
+1) If you wish to use BModes with Co-Blade, you will need to download the
+   the BModes v3.00.00 executable from: 
+   http://wind.nrel.gov/designcodes/preprocessors/bmodes/,
+   and place the BModes.exe file in the same directory as the CoBlade.m or
+   CoBlade.exe file.
+
+2) If you wish to run the MATLAB version of Co-Blade (i.e. CoBlade.m),
+   then you will need to have the "MATLAB Optimization Toolbox" and
+   "MATLAB Global Optimization Toolbox" installed if using the optimization
+   features of Co-Blade.  If only using Co-Blade in analysis mode, no additional
+   MATLAB toolboxes are required.
+
+3) If using the compiled version of Co-Blade (i.e. CoBlade.exe), you do 
+   not need MATLAB installed, but you will need to first install
+   the MATLAB Compiler Runtime (version MCR v7.16).
+   The MATLAB Compiler Runtime is a standalone set of shared libraries 
+   that enables the execution of compiled MATLAB applications or components 
+   on computers that do not have MATLAB installed. 
+
+   Download the files: MCR Installer v7.16.zip.001
+                       MCR Installer v7.16.zip.003
+                       MCR Installer v7.16.zip.003
+   Using 7-zip (freeware) just extract the file MCR Installer v7.16.zip.001
+   and the 3 files will be extracted and combined to yeild the file
+   "MCR Installer v7.16.exe" which should be about 423 MB in size.  Execute this
+   file and follow the instructions to install the MCR v7.16.

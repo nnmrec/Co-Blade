@@ -1,0 +1,132 @@
+-----  Input File  -------------------------------------------------------------
+This design is based approximately from D. Griffith and T. Ashwill(2011) "The Sandia 100-m All-Glass Baseline Wind Turbine Blade: SNL100-00" 
+This line is for user comments.  
+----   Development Settings  --------------------------------------------------- 
+0               DEBUG_LVL       Controls the level of output from Co-Blade (0 for no debug messages, 1 and greater for more debugging messages and figures)
+42              RAND_SEED       A positive integer that seeds all random number generators.
+-----  Analysis Options  -------------------------------------------------------
+true            SELF_WEIGHT:    Include self-weight as a body force? (choose true or false)
+false           BUOYANCY:       Include buoyancy as a body force? (choose true or false)
+true            CENTRIF:        Include centrifugal force as a body force? (choose true or false)
+true            DISP_CF:        Apply correction factors to the beam displacements? (choose true or false)
+0               N_MODES:        Number of modes to be computed 
+60              N_ELEMS:        Number of blade finite elements to be used in the modal analysis
+false           VARY_MAT_PROPS: Perform Monte Carlo analysis with uncertain material properties?
+100             SAMPLE_SIZE:    Sample size for Monte Carlo analysis
+0.10            MAT_COV:        Coefficient of variation (cov = std/mean) for uncertain material properties
+-----  Optimization  -----------------------------------------------------------
+false           OPTIMIZE:       Perform optimization of composite layup?
+PS              OPT_METHOD:     Optimization algorithm for the optimization of composite layup (choose 'PS', 'GS', 'GA', or 'PSO')
+false           OPT_PITAXIS:    Optimize the pitch axis?
+0.375           PITAXIS_VAL:    Pitch axis value outboard of max chord (ignored if OPT_PITAXIS = false)
+4               INB_STN:        Inboard station where the leading and trailing edge panels, spar caps, and shear webs begin
+14              TRAN_STN:       Station where the root transition ends
+31              OUB_STN:        Outboard station where the leading and trailing edge panels, spar caps, and shear webs end
+4               NUM_CP:         Number of control points between INB_STN and OUB_STN
+false           READ_INITX:     Read the initial values for the design variables from INITX_FILE?
+none            INITX_FILE:     Input file for the intitial values of the design variables.
+false           WRITE_STR:      Write structural input files at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_F_ALL:    Write the fitness value and penalty factors at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_X_ALL:    Write the design variables at each function evaluation? (recommended to set = false, unless for debugging purposes)
+false           WRITE_X_ITER:   Write the design variables at each iteration? (recommended to set = false, unless for debugging purposes)
+-----  Constraints  ------------------------------------------------------------
+12.0            MAX_TIP_D:      Maximum allowable tip deflection (m) (deflection in the x-direction of global coord. system)
+1.0             MIN_FREQ_SEP:   Minimum allowable difference between the blade rotation frequency and blade natural frequencies (Hz)
+-----  Environmental Data  -----------------------------------------------------
+1.225           FLUID_DEN:      Fluid density (kg/m^3)
+9.81            GRAV:           Gravitational acceleration (m/s^2)
+-----  Blade Data  -------------------------------------------------------------
+34              NUM_SEC:        Number of blade cross sections
+100             BLD_LENGTH:     Blade length (m)
+2.5             HUB_RAD:        Hub radius (m)
+5.0             SHAFT_TILT:     Shaft tilt angle (deg)
+-2.5            PRE_CONE:       Pre-cone angle (deg)
+90              AZIM:           Azimuth angle (deg)
+0.0             BLD_PITCH:      Blade pitch angle (deg)
+0.0             ROT_SPD:        Rotor rotational speed (rpm)
+cosine          INTERP_AF:      Interpolate airfoil coordinates? (choose "none", "cosine", or "equal" with no quotation marks)
+60              N_AF:           Number of points in interpolated airfoil coordinates (ignored if INTERP_AF = none)
+mats-WindTurbine.inp     MATS_FILE:      Input file for material properties
+0               FILLER_DENS:    (CURRENTLY IGNORED) Density of blade filler material (kg/m^3) (enter 0 if no filler material exists)
+zFrac     aeroTwst        chord      pitAxis         px_a         py_a         qz_a    af_shape_file    int_str_file
+  (-)        (deg)          (m)          (-)        (N/m)        (N/m)          (N)              (-)             (-)
+0.000       13.308        5.694        0.500            0            0            0      Circle.prof            WindTurbine_1-3.lam
+0.003       13.308        5.694        0.500            0            0            0      Circle.prof            WindTurbine_1-3.lam
+0.010       13.308        5.694        0.500            0            0            0      Transition_0982.prof   WindTurbine_1-3.lam
+0.022       13.308        5.772        0.499            0            0            0      Transition_0939.prof   WindTurbine_4.lam
+0.038       13.308        5.949        0.490            0            0            0      Transition_0878.prof   WindTurbine_5.lam
+0.057       13.308        6.170        0.476            0            0            0      Transition_0803.prof   WindTurbine_6.lam
+0.078       13.308        6.418        0.461            0            0            0      Transition_0723.prof   WindTurbine_7.lam
+0.100       13.308        6.676        0.445            0            0            0      Transition_0645.prof   WindTurbine_8.lam
+0.122       13.308        6.934        0.429            0            0            0      Transition_0577.prof   WindTurbine_9.lam
+0.143       13.308        7.184        0.412            0            0            0      Transition_0517.prof   WindTurbine_10.lam
+0.162       13.182        7.396        0.400            0            0            0      Transition_0472.prof   WindTurbine_11.lam
+0.178       13.053        7.545        0.391            0            0            0      Transition_0437.prof   WindTurbine_12.lam
+0.188       12.955        7.605        0.383            0            0            0      Transition_0418.prof   WindTurbine_13.lam
+0.195       12.900        7.624        0.380            0            0            0      DU_0405.prof           WindTurbine_14.lam
+0.202       12.700        7.620        0.380            0            0            0      DU_0395.prof           WindTurbine_15.lam
+0.210       12.500        7.611        0.379            0            0            0      DU_0385.prof           WindTurbine_16.lam
+0.230       11.900        7.550        0.378            0            0            0      DU_0368.prof           WindTurbine_17.lam
+0.260       11.000        7.430        0.377            0            0            0      DU_0350.prof           WindTurbine_18.lam
+0.290       10.300        7.280        0.375            0            0            0      DU_0330.prof           WindTurbine_19.lam
+0.340        9.500        7.020        0.375            0            0            0      DU_0300.prof           WindTurbine_20.lam
+0.400        8.400        6.670        0.375            0            0            0      DU_0270.prof           WindTurbine_21.lam
+0.460        7.300        6.300        0.375            0            0            0      DU_0250.prof           WindTurbine_22.lam
+0.520        6.100        5.910        0.375            0            0            0      DU_0230.prof           WindTurbine_23.lam
+0.580        5.100        5.550        0.375            0            0            0      DU_0210.prof           WindTurbine_24.lam
+0.633        4.214        5.227        0.375            0            0            0      Transition_0200.prof   WindTurbine_25.lam
+0.698        3.182        4.827        0.375            0            0            0      Transition_0183.prof   WindTurbine_26.lam
+0.761        2.388        4.443        0.375            0            0            0      NACA6_0180.prof        WindTurbine_27.lam
+0.819        1.701        4.090        0.375            0            0            0      NACA6_0180.prof        WindTurbine_28.lam
+0.871        1.079        3.766        0.375            0            0            0      NACA6_0180.prof        WindTurbine_29.lam
+0.916        0.569        3.267        0.375            0            0            0      NACA6_0180.prof        WindTurbine_30.lam
+0.952        0.236        2.542        0.375            0            0            0      NACA6_0180.prof        WindTurbine_31.lam
+0.978        0.109        1.553        0.375            0            0            0      NACA6_0180.prof        WindTurbine_32-34.lam
+0.995        0.027        0.535        0.375            0            0            0      NACA6_0180.prof        WindTurbine_32-34.lam
+1.000        0.000        0.100        0.375            0            0            0      NACA6_0180.prof        WindTurbine_32-34.lam
+-----  Shear Web Data  ---------------------------------------------------------
+3               NUM_WEBS:       number of webs
+10              WEB_NODES:      number of nodes in each web (ignored if NUM_WEBS = 0)
+webNum    inbStn    oubStn     inbChLoc     oubChLoc (This table of values is ignored if OPTIMIZE = true)
+   (-)       (-)       (-)          (-)          (-)
+     1         4        31       0.3695       0.1095
+     2         4        31       0.6300       0.6405
+     3        10        24       0.7800       0.6800
+-----  Output Options  ---------------------------------------------------------
+false           TAB_DEL:        Tab delimited text output files?
+true            PROPS_FILE:     Write structural properties text output file? 
+true            LOAD_DSP_FILE:  Write loads and displacement text output file? 
+true            PANEL_FILE:     Write panel data text output file?
+true            LAMINA_FILE:    Write lamina data text output file?
+true            DATA_GUI:       Open graphical user interface (GUI) to visualize geometry, panel, and layer data?
+false           SAVE_PLOTS:     Save plots to a file? (only saves plots which are actually created)
+-fig            SAVE_FIG_FMT:   Image file format. Enter -fig to save as MATLAB .fig, otherwise enter a comma delimited (no spaces) list of format options (ex: -png,-r300,-a2)
+true            PLOT_OPT_ITER:  Plot information on design variables and convergence criteria during optimization iterations? (ignored if OPTIMIZE = false)
+false           PLOT_F_BLD:     Plot applied forces on the blade geometry?
+false           PLOT_DISP_BLD:  Plot displaced blade geometry?
+true            PLOT_GBL_SYS:   Plot the applied forces & displaced blade geometry in the global coordinate system? (ignored if PLOT_F_BLD and PLOT_DISP_BLD are false)
+false           PLOT_YMOD:      Plot panel effective Young's modulus? 
+false           PLOT_GMOD:      Plot panel effective shear modulus? 
+false           PLOT_MASS_DEN:  Plot mass distribution?
+false           PLOT_PRIN_ANG:  Plot angle of principal axes?
+false           PLOT_AT_STFF:   Plot axial and torsional stiffness?
+false           PLOT_BSTFF:     Plot bending stiffness?
+false           PLOT_INER:      Plot mass moments of inertia?
+false           PLOT_CENTERS:   Plot locations of mass center, tension center, and shear center?
+false           PLOT_NORMS:     Plot panel normal stress? 
+false           PLOT_SHEARS:    Plot panel shear stress?
+false           PLOT_BCRIT:     Plot panel buckling criteria? 
+false           PLOT_E11:       Plot lamina 1st principal strain? 
+false           PLOT_E22:       Plot lamina 2nd principal strain? 
+false           PLOT_E12:       Plot lamina principal shear strain? 
+false           PLOT_S11:       Plot lamina 1st principal stress? 
+false           PLOT_S22:       Plot lamina 2nd principal stress? 
+false           PLOT_S12:       Plot lamina principal shear stress? 
+false           PLOT_S11_FC:    Plot lamina 1st principal stress failure criteria? 
+false           PLOT_S22_FC:    Plot lamina 2nd principal stress failure criteria? 
+false           PLOT_S12_FC:    Plot lamina principal shear stress failure criteria?
+false           PLOT_MODE_D:    Plot modal displacements?
+false           PLOT_MODE_S:    Plot modal slopes?
+false           PLOT_APPLOADS:  Plot applied loads?
+false           PLOT_RESLOADS:  Plot resultant loads?
+false           PLOT_DEFLECT:   Plot blade centroidal deflections?

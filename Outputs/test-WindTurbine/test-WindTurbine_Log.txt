@@ -1,0 +1,7 @@
+
+
+ Executing case test-WindTurbine with Co-Blade v2.0.0_rc1.
+All data in Co-Blade workspace saved to MAT-file: 
+ C:\Users\danny\Dropbox\GitHub\Co-Blade\Outputs\test-WindTurbine\test-WindTurbine.mat 
+
+ Co-Blade v2.0.0_rc1 terminated normally for case test-WindTurbine. 

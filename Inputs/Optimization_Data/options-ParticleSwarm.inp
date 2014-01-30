@@ -1,0 +1,15 @@
+This line is for user comments.  
+See (http://www.mathworks.com/matlabcentral/fileexchange/25986) for further documentation on Particle Swarm optimization parameters.
+-----  Particle Swarm Options  -------------------------------------------------
+0.25        CognitiveAttraction:  Positive scalar.   
+soft        ConstrBoundary:       Choose 'soft', 'reflect, 'absorb, or 'penalize'. A 'soft' boundary allows particles to leave problem bounds, but sets their fitness scores to Inf if they do. This can save time, since infeasible points are not evaluated. The 'penalize' option as described in Perez 2007 is the default since it seems to provide the best combination of performance and versatility. The 'reflect' and 'absorb' options prevent the particles from travelling outside the problem bounds at all. However, 'reflect' has only been implemented for bounded constraints, and 'absorb' may suffer from poor performance if linear or nonlinear equality constraints are used. 
+diag        Display:              Choose 'off', 'iter', 'diag', or 'final' 
+-Inf        FitnessLimit:         Scalar.
+120         Generations:          Positive integer. 
+1800        MaxFunEvals:          Maximum number of objective function evaluations.
+120          PopulationSize:       Positive integer. 
+1.25        SocialAttraction:     Social attraction.
+1000        StallGenLimit:        Positive integer. 
+Inf         TimeLimit:            Positive scalar. 
+1e-6        TolFun:               Positive scalar. 
+Inf         VelocityLimit:        Positive scalar.

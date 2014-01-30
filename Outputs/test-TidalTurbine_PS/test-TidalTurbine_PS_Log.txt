@@ -1,0 +1,57 @@
+
+
+ Executing case test-TidalTurbine_PS with Co-Blade v2.0.0_rc1.
+
+Diagnostic information.
+	objective function = @(xo)structFitness(xo,SIM,ANLS,OPT,ENV,BLADE,WEB,AF,MATS,Coord,z_oub,z_CP,nSegsTopBot)
+	9 Inequality constraints
+	0 Equality constraints
+	9 Total number of linear constraints
+
+	X0 = [  0.5 ;  0.25 ;  0.03 ;  0.01 ;  0.005 ;  0.02 ;  0.005 ;  0.001 ;  0.001 ;  0.006 ;  0.003 ;  0.01 ;  0.005 ;  0.003 ;  0.003 ;  0.005 ;  0.005 ]
+Modified options:
+	options.TolMesh = 1e-06
+	options.TolCon = 1e-06
+	options.TolX = 1e-06
+	options.TolFun = 1e-06
+	options.TolBind = 1e-06
+	options.MaxIter = Inf
+	options.TimeLimit = Inf
+	options.MaxFunEvals = 3600
+	options.MeshContraction = 0.5
+	options.MeshExpansion = 2 
+	options.MeshAccelerator = 'on'
+	options.MeshRotate = 'on'
+	options.InitialMeshSize = 1 
+	options.InitialPenalty = 10
+	options.PenaltyFactor = 100
+	options.ScaleMesh = 'on'
+	options.MaxMeshSize = Inf
+	options.PollMethod = 'gsspositivebasis2n'
+	options.CompletePoll = 'on'
+	options.PollingOrder = 'success'
+	options.CompleteSearch = 'on'
+	options.Display = 'diagnose'
+	options.OutputFcns = @(optimvalues,options,flag)patternSearchOutput(optimvalues,options,flag,SIM,OPT,BLADE,WEB,AF,OUT,z_oub,z_CP)
+	options.PlotFcns = {  @psplotbestf @psplotmeshsize @psplotfuncount @psplotbestx }
+	options.PlotInterval = 1 
+	options.Cache = 'on'
+	options.CacheSize = 10000
+	options.CacheTol = 1e-06
+	options.Vectorized = 'off'
+End of diagnostic information.
+
+Iter     f-count          f(x)      MeshSize     Method
+    0        1              1             1      
+    1        1              1           0.5     Refine Mesh
+    2        1              1          0.25     Refine Mesh
+    3        1              1         0.125     Refine Mesh
+    4        1              1        0.0625     Refine Mesh
+    5        4              1       0.03125     Refine Mesh
+    6       11              1       0.01563     Refine Mesh
+    7       20              1      0.007813     Refine Mesh
+    8       35       0.951905       0.01563     Successful Poll
+Stop requested.
+<a href="matlab: opentoline('C:\Users\danny\Dropbox\GitHub\Co-Blade\Source\writeInpFileNewMain.m',4,1)">4   </a>[SIM.inputDir  filesep SIM.inputFile]
+fid1 = fopen(SIM.inputFile, 'r');
+fid2 = fopen([SIM.rootDir filesep 'Inputs' filesep SIM.case '_OPTIMAL.inp'], 'w');

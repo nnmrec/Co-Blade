@@ -1,0 +1,13 @@
+This line is for user comments.  
+See (http://www.mathworks.com/help/toolbox/optim/ug/fmincon.html) for further documentation on Gradient Search (fmincon) optimization parameters.
+-----  Gradient Search Options  ----------------------------------------------
+interior-point        Algorithm:				Algorithm used by fmincon, can choose 'interior-point', 'sqp', or 'active-set' CAUTION: active-set does not always obey constraints.  Try in this order.
+off                   Diagnostics:				Display diagnostic information about the function to be minimized or solved. The choices are 'on' or 'off'.
+iter-detailed         Display:					Level of display: Can choose 'off', 'iter', 'iter-detailed', 'notify', 'notify-detailed', 'final, or 'final-detailed'
+central               FinDiffType: 				Finite differences used to estimate gradients, are either 'forward' or 'central'.
+obj-and-constr        ScaleProblem:				'obj-and-constr' causes the algorithm to normalize all constraints and the objective function. Disable by setting to the default 'none'.
+cg                    SubproblemAlgorithm:		Determines how the iteration step is calculated. The default, 'ldl-factorization', is usually faster than 'cg' (conjugate gradient), though 'cg' might be faster for large problems with dense Hessians.
+bfgs                  Hessian:					Chooses how fmincon calculates the Hessian. The choices are: 'bfgs' (default), 'lbfgs', {'lbfgs',Positive Integer}
+60                    MaxIter: 					Maximum number of iterations allowed.
+1e-6                  TolX: 					Termination tolerance on x, a positive scalar.
+1e-6                  TolFun: 					Termination tolerance on the function value, a positive scalar.
