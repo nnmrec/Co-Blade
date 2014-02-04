@@ -140,32 +140,14 @@ new stopping criteria: max function evaluations
 -all the new Monte Carlo anlysis from GMREC paper
 and 
 
-==== v2.00.00 Dec 2013  D.C. Sale =======================================
-[BUGFIX] 
-The diverging colormap does not always map the 0 value to the white color.  In other words, sometimes the 0 value appears 
-as blue or red.
+==== v2.00.00_rc1 Feb 2 2014  D.C. Sale =======================================
+* Co-Blade can now be called as a function, which an optional output variable that stores all data created during Co-Blade runs (helpful for post-processing)
+* added new directory structure, more clearly indicating Input and Output data
+* improved color schemes for more scientifically accurate visualization, and improvement for colorblind & visually impaired users
+* added option to reset the seed for all random number generators (allows repeatable results from stochastic processes)
+* added a .mat file in the output directory, which stores all data created during Co-Blade run
+* added a log file for the output directories, which logs all text and errors written to the Matlab command window
+* reverted to the v1.30- fitness function, this actually worked better than the GMREC publication...oops
+* add compiled version for Windows
 
-[refactor] 
-all the new Monte Carlo analysis from GMREC paper, clean-up the code!
 
-[feature]  
-add capabilities to visualize in VisIt and Paraview
-
-[feature]  
-add a basic mesh generator for Material Point Method (MPM), this feature
-creates particles in place of the laminas, where the lamina thickness is 
-equal to the particle diameter, and particles are centered along the
-s-coordinate of each individual lamina.  Well.......................
-....maybe this is too much detail...the particle diameter could also 
-be equal to the panel thickness with particles centered along the 
-s-coordinate of each individual panel...I think this is easier for now.
-For the MPM method, I think we need to output the stiffness matrix, mass, stress/strain of each particle
-for visualization with VTK.
-
-[feature]  
-add 3D printing capabilities to Co-Blade via Matlab FEX implementations,
-and print a new rotor via Storti's lab as an example...if possible......
-.......can we print aeroelastically scaled rotors (i.e. variable stiffness)?
-
-[fix]
-reverted to the v1.30- fitness function, this actually worked better than the GMREC publication...oops

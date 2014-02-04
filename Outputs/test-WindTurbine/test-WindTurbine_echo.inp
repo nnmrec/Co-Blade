@@ -46,7 +46,7 @@ false           WRITE_X_ITER:   Write the design variables at each iteration? (r
 0.0             ROT_SPD:        Rotor rotational speed (rpm)
 cosine          INTERP_AF:      Interpolate airfoil coordinates? (choose "none", "cosine", or "equal" with no quotation marks)
 60              N_AF:           Number of points in interpolated airfoil coordinates (ignored if INTERP_AF = none)
-mats-WindTurbine.inp     MATS_FILE:      Input file for material properties
+mats-Wind.inp   MATS_FILE:      Input file for material properties
 0               FILLER_DENS:    (CURRENTLY IGNORED) Density of blade filler material (kg/m^3) (enter 0 if no filler material exists)
 zFrac     aeroTwst        chord      pitAxis         px_a         py_a         qz_a    af_shape_file    int_str_file
   (-)        (deg)          (m)          (-)        (N/m)        (N/m)          (N)              (-)             (-)

@@ -1,10 +1,10 @@
-Generated on January 13, 2014 10:29 AM by Co-Blade v2.0.0_rc1 
+Generated on February 03, 2014  9:05 PM by Co-Blade v2.0.0_rc1 
 This line is for user comments
 *************************** TOP SURFACE ****************************
            3           N_scts(1):  no of sectors on top surface
 
 normalized chord location of nodes defining airfoil sectors boundaries (xsec_node)
-  0.00000000   0.23619889   0.46380111   1.00000000 
+  0.00000000   0.23653475   0.46346525   1.00000000 
 ..................................................................
 Sect_num     N_laminas
      1         5 
@@ -12,11 +12,11 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.00483652         0.0               1  (blade-root)
-      3        1  0.00962874         0.0               5  (LEP-core)
-      4        1  0.00483652         0.0               1  (blade-root)
-      5        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.00401780         0.0               1  (blade-root)
+      3        1  0.00022567         0.0               5  (LEP-core)
+      4        1  0.00401780         0.0               1  (blade-root)
+      5        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 Sect_num     N_laminas
      2         7 
@@ -24,13 +24,13 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.00483652         0.0               1  (blade-root)
-      3        1  0.01604790         0.0               3  (spar-uni)
-      4        1  0.00160479         0.0               4  (spar-core)
-      5        1  0.01604790         0.0               3  (spar-uni)
-      6        1  0.00483652         0.0               1  (blade-root)
-      7        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.00401780         0.0               1  (blade-root)
+      3        1  0.00351048         0.0               3  (spar-uni)
+      4        1  0.00003761         0.0               4  (spar-core)
+      5        1  0.00351048         0.0               3  (spar-uni)
+      6        1  0.00401780         0.0               1  (blade-root)
+      7        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 Sect_num     N_laminas
      3         5 
@@ -38,18 +38,18 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.00483652         0.0               1  (blade-root)
-      3        1  0.01604790         0.0               6  (TEP-core)
-      4        1  0.00483652         0.0               1  (blade-root)
-      5        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.00401780         0.0               1  (blade-root)
+      3        1  0.00351048         0.0               6  (TEP-core)
+      4        1  0.00401780         0.0               1  (blade-root)
+      5        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 
 *************************** BOTTOM SURFACE *************************
            3           N_scts(2):  no of sectors on top surface
 
 normalized chord location of nodes defining airfoil sectors boundaries (xsec_node)
-  0.00000000   0.23619889   0.46380111   1.00000000 
+  0.00000000   0.23653475   0.46346525   1.00000000 
 ..................................................................
 Sect_num     N_laminas
      1         5 
@@ -57,11 +57,11 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.00483652         0.0               1  (blade-root)
-      3        1  0.00962874         0.0               5  (LEP-core)
-      4        1  0.00483652         0.0               1  (blade-root)
-      5        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.00401780         0.0               1  (blade-root)
+      3        1  0.00022567         0.0               5  (LEP-core)
+      4        1  0.00401780         0.0               1  (blade-root)
+      5        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 Sect_num     N_laminas
      2         7 
@@ -69,13 +69,13 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.00483652         0.0               1  (blade-root)
-      3        1  0.01604790         0.0               3  (spar-uni)
-      4        1  0.00160479         0.0               4  (spar-core)
-      5        1  0.01604790         0.0               3  (spar-uni)
-      6        1  0.00483652         0.0               1  (blade-root)
-      7        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.00401780         0.0               1  (blade-root)
+      3        1  0.00351048         0.0               3  (spar-uni)
+      4        1  0.00003761         0.0               4  (spar-core)
+      5        1  0.00351048         0.0               3  (spar-uni)
+      6        1  0.00401780         0.0               1  (blade-root)
+      7        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 Sect_num     N_laminas
      3         5 
@@ -83,11 +83,11 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.00483652         0.0               1  (blade-root)
-      3        1  0.01604790         0.0               6  (TEP-core)
-      4        1  0.00483652         0.0               1  (blade-root)
-      5        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.00401780         0.0               1  (blade-root)
+      3        1  0.00351048         0.0               6  (TEP-core)
+      4        1  0.00401780         0.0               1  (blade-root)
+      5        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 
 *************************** WEBS **************************************
@@ -100,9 +100,9 @@ web_num      N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.00300000         0.0               7  (web-shell)
-      2        1  0.00218750         0.0               8  (web-core)
-      3        1  0.00300000         0.0               7  (web-shell)
+      1        1  0.00202344         0.0               7  (web-shell)
+      2        1  0.00804687         0.0               8  (web-core)
+      3        1  0.00202344         0.0               7  (web-shell)
 ..................................................................
 web_num      N_laminas
      2         3 
@@ -110,6 +110,6 @@ web_num      N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.00300000         0.0               7  (web-shell)
-      2        1  0.00218750         0.0               8  (web-core)
-      3        1  0.00300000         0.0               7  (web-shell)
+      1        1  0.00202344         0.0               7  (web-shell)
+      2        1  0.00804687         0.0               8  (web-core)
+      3        1  0.00202344         0.0               7  (web-shell)

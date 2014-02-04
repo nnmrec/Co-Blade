@@ -10,11 +10,11 @@ Diagnostic information.
 
 	X0 = [  0.5 ;  0.25 ;  0.03 ;  0.01 ;  0.005 ;  0.02 ;  0.005 ;  0.001 ;  0.001 ;  0.006 ;  0.003 ;  0.01 ;  0.005 ;  0.003 ;  0.003 ;  0.005 ;  0.005 ]
 Modified options:
-	options.TolMesh = 1e-06
-	options.TolCon = 1e-06
-	options.TolX = 1e-06
-	options.TolFun = 1e-06
-	options.TolBind = 1e-06
+	options.TolMesh = 1e-006
+	options.TolCon = 1e-006
+	options.TolX = 1e-006
+	options.TolFun = 1e-006
+	options.TolBind = 1e-006
 	options.MaxIter = Inf
 	options.TimeLimit = Inf
 	options.MaxFunEvals = 3600
@@ -37,7 +37,7 @@ Modified options:
 	options.PlotInterval = 1 
 	options.Cache = 'on'
 	options.CacheSize = 10000
-	options.CacheTol = 1e-06
+	options.CacheTol = 1e-006
 	options.Vectorized = 'off'
 End of diagnostic information.
 
@@ -51,7 +51,59 @@ Iter     f-count          f(x)      MeshSize     Method
     6       11              1       0.01563     Refine Mesh
     7       20              1      0.007813     Refine Mesh
     8       35       0.951905       0.01563     Successful Poll
+    9       44       0.951905      0.007813     Refine Mesh
+   10       55       0.904077       0.01563     Successful Poll
+   11       64       0.904077      0.007813     Refine Mesh
+   12       73       0.904077      0.003906     Refine Mesh
+   13       95       0.747303      0.007813     Successful Poll
+   14      104       0.747303      0.003906     Refine Mesh
+   15      124       0.723123      0.007813     Successful Poll
+   16      133       0.723123      0.003906     Refine Mesh
+   17      151       0.704215      0.007813     Successful Poll
+   18      161       0.704215      0.003906     Refine Mesh
+   19      180       0.689085      0.007813     Successful Poll
+   20      190       0.689085      0.003906     Refine Mesh
+   21      210       0.664799      0.007813     Successful Poll
+   22      220       0.664799      0.003906     Refine Mesh
+   23      238       0.656787      0.007813     Successful Poll
+   24      248       0.656787      0.003906     Refine Mesh
+   25      264         0.6516      0.007813     Successful Poll
+   26      274         0.6516      0.003906     Refine Mesh
+   27      291       0.643583      0.007813     Successful Poll
+   28      301       0.643583      0.003906     Refine Mesh
+   29      316       0.643583      0.001953     Refine Mesh
+   30      341       0.600346      0.003906     Successful Poll
+
+Iter     f-count        f(x)       MeshSize      Method
+   31      356       0.600346      0.001953     Refine Mesh
+   32      383        0.58704      0.003906     Successful Poll
+   33      398        0.58704      0.001953     Refine Mesh
+   34      425       0.577521      0.003906     Successful Poll
+   35      440       0.577521      0.001953     Refine Mesh
+   36      465       0.576051      0.003906     Successful Poll
+   37      479       0.576051      0.001953     Refine Mesh
+   38      502       0.574896      0.003906     Successful Poll
+   39      517       0.574896      0.001953     Refine Mesh
+   40      537       0.574027      0.003906     Successful Poll
+   41      552       0.574027      0.001953     Refine Mesh
+   42      573       0.572532      0.003906     Successful Poll
+   43      587       0.572532      0.001953     Refine Mesh
+   44      606       0.572532     0.0009766     Refine Mesh
+   45      632       0.550724      0.001953     Successful Poll
+   46      652       0.550724     0.0009766     Refine Mesh
+   47      678       0.546877      0.001953     Successful Poll
+   48      698       0.546877     0.0009766     Refine Mesh
+   49      723       0.545585      0.001953     Successful Poll
+   50      745       0.545585     0.0009766     Refine Mesh
+   51      769       0.544824      0.001953     Successful Poll
+   52      791       0.544824     0.0009766     Refine Mesh
+   53      813       0.544364      0.001953     Successful Poll
+   54      835       0.544364     0.0009766     Refine Mesh
+   55      858       0.543597      0.001953     Successful Poll
+   56      880       0.543597     0.0009766     Refine Mesh
+   57      901       0.543597     0.0004883     Refine Mesh
 Stop requested.
-<a href="matlab: opentoline('C:\Users\danny\Dropbox\GitHub\Co-Blade\Source\writeInpFileNewMain.m',4,1)">4   </a>[SIM.inputDir  filesep SIM.inputFile]
-fid1 = fopen(SIM.inputFile, 'r');
-fid2 = fopen([SIM.rootDir filesep 'Inputs' filesep SIM.case '_OPTIMAL.inp'], 'w');
+All data in Co-Blade workspace saved to MAT-file: 
+ C:\Users\Danny\Dropbox\GitHub\Co-Blade\Outputs\test-TidalTurbine_PS\test-TidalTurbine_PS.mat 
+
+ Co-Blade v2.0.0_rc1 terminated normally for case test-TidalTurbine_PS. 

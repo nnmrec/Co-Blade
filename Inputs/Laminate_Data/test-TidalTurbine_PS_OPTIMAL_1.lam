@@ -1,4 +1,4 @@
-Generated on January 13, 2014 10:29 AM by Co-Blade v2.0.0_rc1 
+Generated on February 03, 2014  9:05 PM by Co-Blade v2.0.0_rc1 
 This line is for user comments
 *************************** TOP SURFACE ****************************
            1           N_scts(1):  no of sectors on top surface
@@ -12,9 +12,9 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.04895146         0.0               1  (blade-root)
-      3        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.04066505         0.0               1  (blade-root)
+      3        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 
 *************************** BOTTOM SURFACE *************************
@@ -29,8 +29,8 @@ Sect_num     N_laminas
 lamina    num of  thickness   fibers_direction  composite_material ID
 number    plies   of ply (m)       (deg)               (-)
 lam_num  N_plies    Tply         Tht_lam            Mat_id
-      1        1  0.01000000         0.0               2  (blade-shell)
-      2        1  0.04895146         0.0               1  (blade-root)
-      3        1  0.01000000         0.0               2  (blade-shell)
+      1        1  0.00609375         0.0               2  (blade-shell)
+      2        1  0.04066505         0.0               1  (blade-root)
+      3        1  0.00609375         0.0               2  (blade-shell)
 ..................................................................
 
