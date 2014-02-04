@@ -9,6 +9,9 @@ function CB = CoBlade(inputFile)
 %
 %   CoBlade(inputFile) executes the Co-Blade code for the input file 
 %   named by the string inputFile (with the file extension included).
+%   CB is a structure that contains all the variables computed during
+%   a Co-Blade run; the CB data structure is helpful for post-processing
+%   data within Matlab.
 %
 %   If using the compiled version of CoBlade (because you do not have
 %   access to the required toolboxes) type the command:
@@ -16,14 +19,6 @@ function CB = CoBlade(inputFile)
 %   at the command prompt, where inputFile is the input file.
 
 %% TO-DO:
-% % add diary output
-% % add Output folders to seperate data more cleanly? creat output folders for each case
-% % change one sided color maps to use grey @ 0 (instead of yellow), red/yellow @ maximum
-% % rest the RNG like in HARP_opt
-% % actuall write the output files to the Output directory
-% % add save for .mat file save (like in HARP_Opt)
-% % add outputs to this function
-
 % % vRC_1
 % make sure TidalTurbine optimization algorithms are working still (for differen # of CP and different algorithms)
 % normalize the fitness value by the initial fitness value
@@ -36,18 +31,13 @@ function CB = CoBlade(inputFile)
 % add particle generator for Material Point Method, add VTK particle writer (https://github.com/cfinch/Shocksolution_Examples/blob/master/Visualization/vtktools.py)
 
 % tag_v2.0.0
-% verify rc_2 is woooooorking 
+% verify rc_2 is working as intended for major release
 
 % WISHLIST
 % non-linear constraints to improve optimization effectiveness
 % more physical failure criteria (e.g. Tsai-Wu and etc.)
 % easier way to select between materials and regions in GUI feature
 % assert statements to take care of all error handling (will reduce LOC significantly I think)
-
-
-% DOCUMENTATION
-% what it __is__, and what it __is not__
-% is not a replacement for higher fidelity methods, such as FEM (ANSYS and VABS for example...)
 
 %% clear all variables and close files/figures
 % clear all;
@@ -121,7 +111,7 @@ if OPT.OPTIMIZE || OPT.OPT_PITAXIS
     if OPT.OPTIMIZE
         BLADE.strFile = cell(BLADE.NUM_SEC, 1); % overwrite this variable with the new names
         for n = 1:BLADE.NUM_SEC
-            BLADE.strFile{n} = [SIM.case '_OPT_' num2str(n) '.lam'];
+            BLADE.strFile{n} = [SIM.case '_OPTIMAL_' num2str(n) '.lam'];
         end 
     end
     writeInpFileNewMain(SIM, OPT, BLADE, WEB);

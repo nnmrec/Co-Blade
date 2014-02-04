@@ -36,7 +36,7 @@ end
 if OPT.WRITE_X_ITER
     % the user has requested to write the design variables to a text file
     fmt = [ repmat('%18.16f  ', 1, numel(x_current)), '\r\n' ];
-    fid = fopen([SIM.rootDir filesep SIM.case '_iterX.out'], 'a');
+    fid = fopen([SIM.outputDir filesep SIM.case '_iterX.out'], 'a');
     fprintf(fid, fmt, x_current);       
     fclose(fid);
 end 

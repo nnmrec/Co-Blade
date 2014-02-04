@@ -3,7 +3,7 @@ function writeInpFileNewMain(SIM, OPT, BLADE, WEB)
 % create a copy of the main input file, but update any parameters that were changed/created by the optimization routine
 fid1 = fopen(SIM.inputFile, 'r');
 fid2 = fopen([SIM.rootDir filesep 'Inputs' filesep SIM.case '_OPTIMAL.inp'], 'w');
-for n = 1:14
+for n = 1:17
     line = fgetl(fid1);
     fprintf(fid2, '%s\r\n', line);
 end
