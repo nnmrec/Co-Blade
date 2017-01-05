@@ -9,21 +9,21 @@ Co-Blade is an open source software that can be used for the structural analysis
 In summary, the Co-Blade software contains many features:
 
 * Realistic Modeling of Composite Blades
-** nearly arbitrary topology & material properties
+  ** nearly arbitrary topology & material properties
 * Computation of Structural Properties
-** offsets: center-of-mass, tension-center, & shear-center
-** inertias: mass & mass moments of inertia
-** stiffnesses: axial, bending, & torsional
-** principal axes: inertial, centroidal, & elastic principal axes
-** modal analysis: coupled mode shapes & frequencies (via integration w/ BModes)
+  ** offsets: center-of-mass, tension-center, & shear-center
+  ** inertias: mass & mass moments of inertia
+  ** stiffnesses: axial, bending, & torsional
+  ** principal axes: inertial, centroidal, & elastic principal axes
+  ** modal analysis: coupled mode shapes & frequencies (via integration w/ BModes)
 * Structural Analysis
-** nearly arbitrary applied aerodynamic forces & moments
-** computation of body forces (centrifugal, weight, & buoyancy)
-** computation of load induced blade deflections, lamina-level stresses & strains, & panel buckling stresses
+  ** nearly arbitrary applied aerodynamic forces & moments
+  ** computation of body forces (centrifugal, weight, & buoyancy)
+  ** computation of load induced blade deflections, lamina-level stresses & strains, & panel buckling stresses
 * Optimization of Composite Layup
-** For a given external blade shape & design load, Co-Blade can determine an optimal composite layup which minimizes blade mass while simultaneously satisfying constraints on maximum stress, buckling, deflection, & placement of natural frequencies
+  ** For a given external blade shape & design load, Co-Blade can determine an optimal composite layup which minimizes blade mass while simultaneously satisfying constraints on maximum stress, buckling, deflection, & placement of natural frequencies
 * Graphical Post-Processing
-** A large variety of 2D & 3D visualizations can be created through a graphical user interface to provide instant visual feedback
+  ** A large variety of 2D & 3D visualizations can be created through a graphical user interface to provide instant visual feedback
 
 ## Showcase:
 
