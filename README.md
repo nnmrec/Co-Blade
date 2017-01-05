@@ -45,24 +45,17 @@ On the [Showcases page](https://github.com/nnmrec/Co-Blade/blob/master/Documenta
 
 ## Code & Documentation:
 
-Obtain the latest version of Co-Blade and user’s guide on the [Release Downloads page](https://github.com/nnmrec/Co-Blade/releases). The modal analysis capabilities of Co-Blade also require the BModes v3.00.00 code ([which must be obtained from NREL](https://nwtc.nrel.gov/BModes)). If using the compiled version of Co-Blade, you will also need to install the MATLAB Compiler Runtime v7.16, available on the Downloads page. 
+Obtain the latest version of Co-Blade and user’s guide on the [Release Downloads page](https://github.com/nnmrec/Co-Blade/releases). The modal analysis capabilities of Co-Blade also require the BModes v3.00.00 code ([which must be obtained from NREL](https://nwtc.nrel.gov/BModes)). If using the compiled version of Co-Blade, you will also need to install the [Matlab Component Runtime v7.16](http://wind.nrel.gov/designcodes/miscellaneous/MatLab_MCRInstaller/).  Some Matlab toolboxes are also required, but optional (the Optimization and Global Optimization toolboxes).
+
+Some notes related to theory and equation derivation are available here, [Theory Guide](https://github.com/nnmrec/Co-Blade/blob/master/Documentation/4_Notes.md).
 
 Co-Blade is an open source project aimed at developing user friendly software for the analysis and design of composite blades for wind and hydrokinetic turbines. If you are interested in becoming a contributor to the Co-Blade project (either through modifying the code, adding new features, validating Co-Blade results, or anything else you are interested in) please feel free to contact me, I am happy to discuss possible collaborations.
 
 
-## Prerequisites
-**Users:**
+## Run the Co-Blade Examples
 
-* [Matlab Component Runtime v7.16](http://wind.nrel.gov/designcodes/miscellaneous/MatLab_MCRInstaller/)
-
-**Developers:**
-
-* C compiler
-* Matlab (optional toolboxes: Optimization, Global Optimization)
-
-## Run Examples
-
-From the Matlab prompt (compatible with Linux, Windows, and Mac)
+Edit the main User Input file, denoted by *.inp file type, following the [examples here](https://github.com/nnmrec/Co-Blade/tree/master/Inputs).
+From the Matlab prompt (compatible with Linux, Windows, and Mac), call the function simply by
 
     $ CoBlade('input_filename.inp')
 
