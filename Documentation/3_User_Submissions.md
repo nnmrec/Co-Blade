@@ -4,10 +4,10 @@ Cylindrical Beam with Different Composite Layups
 
 Hongli Jia (MS-PhD Candidate of the Structures and Composites Laboratory, Hanyang University) studied a circular beam with different composite layups and compared predictions for stiffness and deflection from the Co-Blade and Abaqus FEM codes. Thanks to Hongli for collaboration on this study!
 
-| https://co-blade.googlecode.com/svn/wiki/images/CoBlade%20to%20Abaqus%20comparison%20-%20circular%20beam%20problem%20statement.png' /> | |:-------------------------------------------------------------------------------------------------------------------------------------------------|
+![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/CoBlade to Abaqus comparison - circular beam problem statement.png)
 
-| https://co-blade.googlecode.com/svn/wiki/images/CoBlade%20to%20Abaqus%20comparison%20-%20bending%20stiffness.png' /> | |:-------------------------------------------------------------------------------------------------------------------------------|
+![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/CoBlade to Abaqus comparison - bending stiffness.png)
 
-| https://co-blade.googlecode.com/svn/wiki/images/CoBlade%20to%20Abaqus%20comparison%20-%20torsional%20stiffness.png' /> | |:---------------------------------------------------------------------------------------------------------------------------------|
+![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/CoBlade to Abaqus comparison - torsional stiffness.png)
 
-| https://co-blade.googlecode.com/svn/wiki/images/CoBlade%20to%20Abaqus%20comparison%20-%20deflections.PNG' /> | |:-----------------------------------------------------------------------------------------------------------------------|
+![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/CoBlade to Abaqus comparison - deflections.PNG)
