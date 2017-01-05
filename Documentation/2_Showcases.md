@@ -1,11 +1,9 @@
 Below are some examples of visualizations created with Co-Blade:
 
-https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade logo.PNG' width='640' />
-
+![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade logo.PNG)
 Figure 1. Replica of the Sandia SNL100-00 100-meter 13.2MW wind turbine blade, modeled in the Co-Blade software. Co-Blade is able to model a large variety of composite layups and blade topologies.
 
-| https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process GUI.png' width='400' /> | |:--------------------------------------------------------------------------------------------------------------|
-
+![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process GUI.png)
 Figure 2. This graphical user interface (GUI) allows the user to plot a 3D representation of the blade and to select via a spreadsheet which panels and/or laminas are shown in the plot. Also, the user can select which output parameter (i.e. Effective modulus, panel thickness, strain, stress, etc.) are visualized in the selected panels and/or laminas. Many types of visualizations can be created by using this GUI, and some examples are illustrated in Figure 3 below.
 
 | (a) | https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process Blade Geometry.png' width='480' /> | |:----|:---------------------------------------------------------------------------------------------------------------------------| | (b) | https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process Max Stress FC blade shell.png' width='480' /> | | (c) | https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process Max Stress FC blade root.png' width='480' /> | | (d) | https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process Max Stress FC spar cap.png' width='480' /> | | (e) | https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade post process Max Stress FC shear webs.png' width='480' /> |
