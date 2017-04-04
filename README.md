@@ -16,8 +16,8 @@ Co-Blade v2.0.0_rc1 (Release Candidate 1)
 ## Co-Blade Overview:
 
 Co-Blade is an open source software that can be used for the structural analysis and design of composite blades for wind and hydrokinetic turbines. The objective of Co-Blade is to help designers accelerate the preliminary design phase by providing the capabilities to quickly analyze alternative composite layups and to study their effects on composite blade properties, deformations, and material stresses and strains.
-
-![alt tag](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade logo.PNG)
+   
+![](https://raw.githubusercontent.com/nnmrec/Co-Blade/master/Documentation/images/Co-Blade%20logo.png)
 
 In summary, the Co-Blade software contains many features:
 
